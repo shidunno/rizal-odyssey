@@ -67,7 +67,6 @@ function WikiImg({ query, source, direct, alt, className }) {
       s ? setSrc(s) : setFailed(true);
     });
     return () => { alive = false; };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key, source]);
 
   if (failed) {
@@ -165,8 +164,6 @@ const timelineData = [
   }
 ];
 
-// Set `img` to an exact image URL (or a local import) to lock the picture.
-// Leave `img` as null and it falls back to searching with `q`.
 const artifactsData = [
   {
     id: 1,
@@ -585,8 +582,9 @@ export default function App() {
       )}
 
       {/* Portfolio Footer */}
-      <footer className="border-t border-[#2b3a31] mt-20 py-6 text-center text-xs font-mono text-[#798a71]">
+      <footer className="border-t border-[#2b3a31] mt-20 py-8 text-center text-xs font-mono text-[#798a71] space-y-2">
         <p>© 1896 José P. Rizal // Digital Heritage Portfolio & Archive</p>
+        <p className="text-[#a3b19b]">Developed by Justine Salcedo, Kenneth Rivera & Lance Warren Vendiola</p>
       </footer>
 
     </div>
